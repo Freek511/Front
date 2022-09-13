@@ -1,0 +1,70 @@
+.fig
+{
+    text-align: center; /* Выравнивание по центру */
+}
+.ul_nav
+{
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+.li_nav
+{
+    float: left;
+}
+.li_nav a
+{
+    display: block;
+    color: #ece8e1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.li_nav a:hover {
+    background-color: #111;
+}
+html
+{
+    background: #ece8e1;
+}
+body
+{
+    margin: 0;
+}
+.footer
+{
+    background: #111111;
+    width: 100%;
+    height: 200px;
+    color: #ece8e1;
+}
+.ul_footer
+{
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111111;
+    position: fixed;
+}
+.li_footer
+{
+   float: left;
+    color: #ece8e1;
+}
+.li_footer a
+{
+    display: block;
+    color: #ece8e1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
