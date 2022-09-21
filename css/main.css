@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 .fig
 {
     text-align: center; /* Выравнивание по центру */
+    padding-top: 0;
+}
+header
+{
+    padding: 10px 0;
+}
+nav
+{
+    margin-bottom: 50px;
+    padding: 10px 0;
 }
 .ul_nav
 {
@@ -20,51 +31,148 @@
 }
 .li_nav a
 {
+    margin: 0 5px;
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif ;
+    opacity: 0.75;
     display: block;
-    color: #ece8e1;
+    color: #fff;/*цвет иконок*/
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 .li_nav a:hover {
-    background-color: #111;
+    opacity: 1;
 }
 html
 {
     background: #ece8e1;
 }
+main
+{
+    font-family: 'Oswald', sans-serif ;
+}
+
 body
 {
     margin: 0;
 }
-.footer
+.logo
 {
-    background: #111111;
-    width: 100%;
-    height: 200px;
-    color: #ece8e1;
-}
-.ul_footer
-{
-    list-style-type: none;
-    margin-top: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #111111;
-    position: fixed;
-}
-.li_footer
-{
-   float: left;
-    color: #ece8e1;
-}
-.li_footer a
-{
-    display: block;
-    color: #ece8e1;
-    text-align: center;
-    padding: 14px 16px;
+    color: #111111;
     text-decoration: none;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+footer
+{
+    position: relative;/*относительное позиционирование*/
+    width: 100%;/*на всю ширину*/
+    padding: 20px 50px;/*поля для контента*/
+    background: #111111;/*цвет футера*/
+    display: flex;
+    justify-content: center;/*в центре по горизонтали*/
+    align-items: center;/*в центре по вертикали*/
+    flex-direction: column;
+    margin-top: 50px;/*отступ сверху*/
+}
+
+.social, .menu
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;/*разрешен перенос на новую строку*/
+}
+.social li, .menu li
+{
+    list-style: none;/*удалить черные маркеры*/
+}
+.social li a
+{
+    font-size: 2em;/*размер иконок*/
+    color: #fff;/*цвет иконок*/
+    margin: 0 10px;
+    display: inline-block;/*отображать как строчно-блочный элемент*/
+    transition: 0.5s;/*плавный переход*/
+}
+.menu li a
+{
+    font-size: 1.2em;/*размер ссылок меню*/
+    font-family: 'Oswald', sans-serif ;
+    color: #fff;/*цвет ссылок меню*/
+    opacity: 0.75;/*значение прозрачности*/
+    margin: 0 15px;
+    text-decoration: none;/*ссылка без подчеркивания*/
+    display: inline-block;
+}
+.menu p
+{
+    font-size: 1.2em;/*размер ссылок меню*/
+    color: #fff;/*цвет иконок*/
+    opacity: 0.75;/*значение прозрачности*/
+    margin: 0 15px;
+    text-decoration: none;/*ссылка без подчеркивания*/
+    display: inline-block;
+}
+.menu li a:hover
+{
+    opacity: 1;
+}
+footer p
+{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-family: 'Oswald', sans-serif ;
+}
+.ft_section
+{
+    margin: 10px 0;
+    max-width: 100%;
+    padding: 8px 12px;
+    background: #292929;
+    border-radius: 8px;
+}
+h5
+{
+    margin: auto;
+}
+article p
+{
+    width: 357px ;
+    height: 108px;
+    grid-column: 2/-1 ;
+    grid-row: 2/-1;
+    padding-bottom: 30px ;
+}
+aside {
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #111111;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside > p {
+    margin: .5rem;
+}
+aside a
+{
+    text-decoration: none;
+    opacity: 0.75;
+    color: #111111;
+}
+aside a:hover
+{
+    opacity: 1;
 }
 
 
