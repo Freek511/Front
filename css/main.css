@@ -64,6 +64,12 @@ body
     width: 20px;
     height: 20px;
     padding: 10px;
+    opacity: 0.75;
+}
+.logo:hover
+{
+    opacity: 1;
+    transform: scale(1.1, 1.1);
 }
 
 footer
