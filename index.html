@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>vlrnews &ndash; список изменений</title>
@@ -9,11 +10,125 @@
 <header>
     <nav>
         <ul class="ul_nav">
-            <li class="li_nav"><a href="#Changes"><img  src="img/VALORANT_Logo_V.jpg" width="35" height="35"></a></li>
+            <li class="li_nav"><a href="#Changes"><img src="img/VALORANT_Logo_V.jpg" width="35" height="35"></a></li>
             <li class="li_nav"><a href="#Map">Изменение карт</a></li>
             <li class="li_nav"><a href="#Competitive">Ранговые игры</a></li>
             <li class="li_nav"><a href="#Fixes">Исправления</a></li>
+            <li class="li_nav"><a href="Guide.html">Поддержка</a></li>
             <li class="li_nav"><a href="#About">Контакты</a></li>
+            <li>
+                <div>
+                    <div style="float: right;">
+                        <a style="
+                        text-decoration: none;
+                        margin: 0 5px;
+                        font-size: 1.2em;
+                        font-family: 'Oswald', sans-serif ;
+                        opacity: 0.75;
+                        display: block;
+                        color: #fff;/*цвет иконок*/
+                        text-align: center;
+                        padding: 14px 16px;"
+                           href="#Registration">Зарегистрироваться</a>
+                    </div>
+                    <div id="Registration" class="modal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Регистрация</h3>
+                                    <a href="#close" title="Close" class="close">×</a>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="">
+                                        <section>
+                                            <label for="email"> Ваша почта:</label>
+                                            <input type="email" name="email" id="email" required placeholder="example@exampale.com">
+                                        </section>
+
+                                        <section>
+                                            <label>Телефон: <input type="tel" name="tel"required placeholder="+x-xxx-xxx-xx-xx"></label>
+                                        </section>
+
+                                        <section>
+                                            <label>Пароль: <input type="password" required placeholder="От 7 до 15 символов" maxlength="15" minlength="7"></label>
+                                        </section>
+
+                                        <section>
+                                            <label>Никнейм: <input type="text" required></label>
+                                        </section>
+
+                                        <section>
+                                            <label>Ваш возраст: <input type="date" required></label>
+                                        </section>
+
+                                        <section>
+                                            <label><input type="checkbox" required > Я согласен с правилами сообщества</label>
+                                        </section>
+
+                                        <section>
+                                            <label><input type="checkbox" checked> Я хочу получать информацию об обновлениях, новостях на свою почту</label>
+                                        </section>
+
+                                        <section>
+                                            <button type="submit"> Зарегистрироваться</button>
+                                        </section>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div style="float: right;">
+                        <a style="
+                        text-decoration: none;
+                        margin: 0 5px;
+                        font-size: 1.2em;
+                        font-family: 'Oswald', sans-serif ;
+                        opacity: 0.75;
+                        display: block;
+                        color: #fff;/*цвет иконок*/
+                        text-align: center;
+                        padding: 14px 16px;"
+                           href="#In">Войти</a>
+                    </div>
+                    <div id="In" class="modal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Войти</h3>
+                                    <a href="#close" title="Close" class="close">×</a>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="">
+
+                                        <section>
+                                            <label>Логин: <input type="text" required></label>
+                                        </section>
+
+                                        <section>
+                                            <label>Пароль: <input type="password" required placeholder="От 7 до 15 символов" maxlength="15" minlength="7"></label>
+
+                                        </section>
+
+                                        <section>
+                                            <label><input type="checkbox" checked> Запомнить меня</label>
+                                        </section>
+
+                                        <section>
+                                            <button type="submit"> Войти</button>
+                                        </section>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
         </ul>
     </nav>
 </header>
@@ -21,7 +136,7 @@
 <main>
     <div>
         <section class="fig">
-            <img src="img/pearl.jpg"  width="50%" height="10%">
+            <img src="img/pearl.jpg" width="50%" height="10%">
         </section>
 
         <section>
@@ -115,8 +230,13 @@
         <article>
                 <h5 id="About">ДЖЕФФ ЛАНДА //Руководитель по работе с сообществом </h5>
                 <p>Всегда выполняет работу вовремя, будь то в письменном, звуковом или электронном виде. Любит жужжание ретро-консолей, необычную атрибутику, связанную с рестлингом, и классические автомобили в оригинальном исполнении. Ведет разработку шутера от первого лица в новом стиле, требующего не только хорошей реакции, но и сообразительности.</p>
-            </article>
+        </article>
 
+        <section>
+            <video controls width="500" height="350" preload="auto"  >
+                <source src="videos/vid.mp4">
+            </video>
+        </section>
 
 
     </div>
