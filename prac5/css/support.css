@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.fig
+{
+    text-align: center; /* Выравнивание по центру */
+    padding-top: 0;
+}
+header
+{
+    padding: 10px 0;
+}
+html
+{
+    background: #ece8e1;
+    box-sizing: border-box;
+}
+main
+{
+    font-family: 'Oswald', sans-serif ;
+}
+body
+{
+    margin: 0;
+}
+section
+{
+    margin: 10px;
+}
+
+.container
+{
+    position: static;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif ;
+    opacity: 0.75;
+    display: block;
+    color: #000000;/*цвет иконок*/
+    padding: 14px 16px;
+    text-decoration: none;
+}
+div span
+{
+    height: 200px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black ;
+    padding: 10px 0px;
+
+}
+.request
+{
+    display: block;
+    max-width: 480px;
+    margin: 20px auto;
+}
+form{
+    display: block;
+    position: relative;
+    margin: 20px 0px;
+}
+
+.input-file{
+   border: 2px dotted rgb(118, 118, 118);
+    background: white;
+    height: 200px;
+    width: 400px;
+    display: inline-block;
+    margin: inherit;
+}
+input[type="file" i] {
+    cursor: pointer;
+    height: 200px;
+    width: 400px;
+    opacity: 0;
+    position: absolute;
+    display: block;
+}
+input[type="file" i] p {
+    text-align: center;
+    display: flex;
+    font-size: xx-small;
+}
+nav
+{
+    margin-bottom: 50px;
+    padding: 10px 0;
+}
+.ul_nav
+{
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+.li_nav
+{
+    float: left;
+}
+.li_nav a
+{
+    margin: 0 5px;
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif ;
+    opacity: 0.75;
+    display: block;
+    color: #fff;/*цвет иконок*/
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.li_nav a:hover {
+    opacity: 1;
+}
+
+.logo
+{
+    color: #111111;
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    opacity: 0.75;
+}
+
+.logo:hover
+{
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+}
+footer {
+    position: relative; /*относительное позиционирование*/
+    width: 100%; /*на всю ширину*/
+    padding: 20px 50px; /*поля для контента*/
+    background: #111111; /*цвет футера*/
+    display: flex;
+    justify-content: center; /*в центре по горизонтали*/
+    align-items: center; /*в центре по вертикали*/
+    flex-direction: column;
+    margin-top: 50px; /*отступ сверху*/
+}
+.social, .menu
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;/*разрешен перенос на новую строку*/
+}
+
+
+.social li, .menu li
+{
+    list-style: none;/*удалить черные маркеры*/
+}
+.social li a
+{
+    font-size: 2em;/*размер иконок*/
+    color: #fff;/*цвет иконок*/
+    margin: 0 10px;
+    display: inline-block;/*отображать как строчно-блочный элемент*/
+    transition: 0.5s;/*плавный переход*/
+}
+.menu li a
+{
+    font-size: 1.2em;/*размер ссылок меню*/
+    font-family: 'Oswald', sans-serif ;
+    color: #fff;/*цвет ссылок меню*/
+    opacity: 0.75;/*значение прозрачности*/
+    margin: 0 15px;
+    text-decoration: none;/*ссылка без подчеркивания*/
+    display: inline-block;
+}
+.menu p
+{
+    font-size: 1.2em;/*размер ссылок меню*/
+    color: #fff;/*цвет иконок*/
+    opacity: 0.75;/*значение прозрачности*/
+    margin: 0 15px;
+    text-decoration: none;/*ссылка без подчеркивания*/
+    display: inline-block;
+}
+
+.menu li a:hover
+{
+    opacity: 1;
+}
+footer p
+{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-family: 'Oswald', sans-serif ;
+}
+.ft_section
+{
+    margin: 10px 0;
+    max-width: 100%;
+    padding: 8px 12px;
+    background: #292929;
+    border-radius: 8px;
+}
+h5
+{
+    margin: auto;
+}
