@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.fig {
+  text-align: center; /* Выравнивание по центру */
+  padding-top: 0;
+}
+
+header{
+  padding-bottom: 100px;
+}
+
+html
+{
+  background: #ece8e1;
+  box-sizing: border-box;
+}
+body
+{
+  font-family: 'Oswald', sans-serif ;
+  margin: 0;
+}
+section
+{
+  margin: 10px;
+}
+
+.container
+{
+  float: right;
+  margin: 0 5px;
+  font-size: 1.2em;
+  font-family: 'Oswald', sans-serif ;
+  opacity: 0.75;
+  display: block;
+  color: #fff;/*цвет иконок*/
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav {
+  border-bottom: 1px solid dimgray;
+  background: #111111;
+  position: fixed;
+  width: 100%;
+  margin-top: 0;
+  top: 0;
+}
+
+.nav__toggle {
+  position: absolute;
+  cursor: pointer;
+  margin: 0rem 1rem;
+  right: 0;
+
+}
+.nav__toggle img
+{
+  width: 1.5rem;
+}
+
+.close {
+  display: none;
+  margin-top: 0.8rem;
+}
+
+.burger {
+  margin-top: 0.8rem;
+}
+
+.nav__checkbox{
+  display: none;
+}
+
+.nav__menu{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: 5px 10px;
+  padding: 5px;
+}
+
+.nav__menu li{
+  list-style: none;
+  display: none;
+}
+
+.nav__menu li:first-child {
+  margin-right: auto;
+  display: block;
+}
+
+.nav__menu li > a{
+  text-decoration: none;
+  color: #ece8e1;
+  opacity: 0.75;
+  font-size: 1.2rem;
+}
+.nav__menu li a:hover{
+  opacity: 1;
+}
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .burger {
+  display: none;
+}
+@media only screen and (min-width: 1200px){
+  .nav .nav__toggle{
+    display: none;
+  }
+  .nav .nav__menu{
+    flex-direction: row;
+  }
+  .nav li{
+    display: block;
+  }
+  .nav li img{
+    transform: scale(1.5,1.5);
+  }
+}
+
+
+.logo
+{
+  color: #111111;
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  opacity: 0.75;
+}
+
+.logo:hover
+{
+  opacity: 1;
+  transform: scale(1.1, 1.1);
+}
+
+.card-gallery
+{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row nowrap;
+  margin: 2rem 0;
+
+}
+.card {
+
+  flex-grow: 2;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.card  button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.card button:hover, .card a:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 700px){
+  .card-gallery{
+    flex-wrap: wrap;
+  }
+}
+
+
+
+footer {
+  position: relative; /*относительное позиционирование*/
+  width: 100%; /*на всю ширину*/
+  padding: 20px 50px; /*поля для контента*/
+  background: #111111; /*цвет футера*/
+  display: flex;
+  justify-content: center; /*в центре по горизонтали*/
+  align-items: center; /*в центре по вертикали*/
+  flex-direction: column;
+  margin-top: 50px; /*отступ сверху*/
+}
+.social, .menu
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;/*разрешен перенос на новую строку*/
+}
+
+
+.social li, .menu li
+{
+  list-style: none;/*удалить черные маркеры*/
+}
+.social li a
+{
+  font-size: 2em;/*размер иконок*/
+  color: #fff;/*цвет иконок*/
+  margin: 0 10px;
+  display: inline-block;/*отображать как строчно-блочный элемент*/
+  transition: 0.5s;/*плавный переход*/
+}
+.menu li a
+{
+  font-size: 1.2em;/*размер ссылок меню*/
+  font-family: 'Oswald', sans-serif ;
+  color: #fff;/*цвет ссылок меню*/
+  opacity: 0.75;/*значение прозрачности*/
+  margin: 0 15px;
+  text-decoration: none;/*ссылка без подчеркивания*/
+  display: inline-block;
+}
+.menu p
+{
+  font-size: 1.2em;/*размер ссылок меню*/
+  color: #fff;/*цвет иконок*/
+  opacity: 0.75;/*значение прозрачности*/
+  margin: 0 15px;
+  text-decoration: none;/*ссылка без подчеркивания*/
+  display: inline-block;
+}
+
+.menu li a:hover
+{
+  opacity: 1;
+}
+footer p
+{
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.1em;
+  font-family: 'Oswald', sans-serif ;
+}
+.ft_section
+{
+  margin: 10px 0;
+  max-width: 100%;
+  padding: 8px 12px;
+  background: #292929;
+  border-radius: 8px;
+}
+h5
+{
+  margin: auto;
+}
+article p
+{
+  width: 200px;
+  position: relative;
+  display: block;
+  column-count: 2;
+  padding-bottom: 30px ;
+}
+
+aside {
+  width: 40%;
+  padding-left: .5rem;
+  margin-left: .5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #111111;
+  font-style: italic;
+  color: #29627e;
+}
+aside > p {
+  margin: .5rem;
+}
+aside a
+{
+  text-decoration: none;
+  opacity: 0.75;
+  color: #111111;
+}
+
+aside a:hover
+{
+  opacity: 1;
+}
