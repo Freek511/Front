@@ -1,0 +1,102 @@
+
+body{
+  background-color:black;
+  width: 100%;
+  font-family:'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+.wrapper {
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  max-width: 700px;
+}
+
+.wrapper .form a {
+  background-color: rgb(26, 126, 232);
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.wrapper .form a:hover {
+  background-color: rgb(217, 224, 231);
+  color: black;
+  transition: 0.6s;
+}
+
+.wrapper .header{
+  color:white;
+  font-size: 36px;
+  left:0;
+  width: 100px;
+  right: 0;
+  margin-bottom: 30px;
+  margin-left: calc(50% - 80px);
+}
+.wrapper .form_content {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template: repeat(3,1fr) / repeat(2,1fr);
+  gap: 10px;
+}
+.form_content .additionalInfo{
+  grid-column: span 2;
+}
+
+.form_content input {
+  color: white;
+  height: 100%;
+  width: 100%;
+  border-bottom: 2px solid aqua;
+  background-color: black;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.form_content input::placeholder{
+   color:white;
+ }
+.form_content input:focus{
+  background-color: rgb(26, 126, 232);
+  transition: 0.8s;
+}
+.form_content input:focus::placeholder{
+  transform: translateX(-50%);
+  transition: 1.8s;
+}
+
+.form_content input:not(focus)::placeholder{
+  transform: translateX(0%);
+  transition: 1.8s;
+}
+
+
+@media screen and (max-width: 713px) {
+  .wrapper {
+    transition: 0.6s;
+  }
+
+  .wrapper .name{
+    grid-column: span 2;
+  }
+
+  .wrapper .lastname{
+    grid-column: span 2;
+  }
+
+  .wrapper .group{
+    grid-column: span 2;
+  }
+
+  .wrapper .email{
+    grid-column: span 2;
+  }
+}
