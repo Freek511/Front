@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script.js"> </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>Задание 1</h1>
+      <form>
+            <input>
+            <input>
+            <input type="submit" disabled id="button" value="Отправить">
+      </form>
+        <script>
+            let alphabet = "zyxwvutsrqponmlkjihgfedcba";
+            let button = document.getElementById("button");
+            function  getRandomChar() {
+                return alphabet[Math.floor(Math.random() * 27)];
+            }
+            function getRandomInt() {
+                return Math.floor(Math.random() * 100);
+            }
+            function isEmpty(obj) {
+                return Object.entries(obj).length === 0
+            }
+            let kapchaText = "";
+            for(let i = 0 ; i < 4; i++) {
+                let upperOrLower = Math.floor(Math.random() * 2);
+                if (upperOrLower === 0) {
+                    kapchaText = kapchaText +  getRandomChar().toLowerCase();
+                }
+                else {
+                    kapchaText = kapchaText + getRandomChar().toUpperCase();
+                }
+            }
+
+            kapcha = prompt("Введите данную последовательность символов: " + kapchaText, "");
+            if (!isEmpty(kapcha) && kapcha === kapchaText) {
+                button.removeAttribute('disabled');
+            }
+            else {
+                let N = getRandomInt();
+                let M = getRandomInt();
+                kapchaText = N + " + " + M + " = ?";
+                kapcha = prompt("Введите сумму: " +kapchaText, "");
+                if(!isEmpty(kapcha) && kapcha === (N + M).toString()) {
+                    button.removeAttribute('disabled');
+                }
+                else {
+                    alert("You robot. We disable form button");
+                }
+            }
+        </script>
+    <h1>Задание 2</h1>
+        <h2 id="currentValue"></h2>
+        <button id="create" >Создать Accumulator</button>
+        <button id="add" >Добавить новое число</button>
+    <script>
+        let isCreated = false;
+        let accumulator;
+        let currentValueElem = document.getElementById("currentValue");
+        document.getElementById("create").addEventListener("click", () => {
+            if(!isCreated) {
+                accumulator = new Accumulator(0);
+                isCreated = true;
+            }
+        });
+        document.getElementById("add").addEventListener("click", ()=> {
+            if(isCreated) {
+                accumulator.read();
+            }
+        });
+        function Accumulator(startingValue) {
+            currentValueElem.innerText = 0;
+            return {
+                value: startingValue,
+                read: function() {
+                    let input_val = prompt("Введите новое число", 0);
+                    if(!isEmpty(input_val)) {
+                        this.value += Number(input_val);
+                        currentValueElem.textContent = this.value;
+                    }
+                }
+            }
+        }
+
+    </script>
+<h1>Задание 3</h1>
+        <button id="add_card" >Добавить карточку</button>
+<div class="card-container" id="container">
+    <div class="card-prac">414141414141414144141414141</div>
+
+</div>
+<script>
+    //10
+    let container = document.getElementById("container");
+    document.getElementById("add_card").addEventListener("click", createCard)
+    function createCard() {
+        let result = prompt("Введите текст на карточке", "")
+        if(result !== "" && result !== null) {
+            var elem = document.createElement('div');
+            elem.className = 'card-prac';
+            elem.innerText = truncate(result, 10);
+            container.append(elem);
+        }
+    }
+    function truncate(str, maxlength) {
+        if(str.length <= maxlength) {
+            return str;
+        }
+        else {
+            return str.slice(0,7) + "...";
+        }
+    }
+</script>
+</body>
+</html>
