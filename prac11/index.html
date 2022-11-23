@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exercise1</h1>
+    <div class="container">
+        <div class="card" id="zero">
+            <div class="card-info" >
+                <p class="title">Card number 0</p>
+                <p class="info">Info for card number 0</p>
+                <button onclick="changeCardInfo('zero')">Change info</button>
+                <button onclick="deleteCard('zero')">Delete block</button>
+            </div>
+        </div>
+
+        <div class="card" id="one">
+            <div class="card-info" >
+                <p class="title">Card number 1</p>
+                <p class="info">Info for card number 1</p>
+                <button onclick="changeCardInfo('one')">Change info</button>
+                <button onclick="deleteCard('one')">Delete block</button>
+            </div>
+        </div>
+
+        <div class="card" id="two">
+            <div class="card-info" >
+                <p class="title">Card number 2</p>
+                <p class="info">Info for card number 2</p>
+                <button onclick="changeCardInfo('two')">Change info</button>
+                <button onclick="deleteCard('two')">Delete block</button>
+            </div>
+        </div>
+
+        <div class="card" id="three">
+            <div clas="card-info" >
+                <p class="title">Card number 3</p>
+                <p class="info">Info for card number 3</p>
+                <button onclick="changeCardInfo('three')">Change info</button>
+                <button onclick="deleteCard('three')">Delete block</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        let infoMassive = 
+        [
+            {
+                title: "Card number 0",
+                infoText: "Info for card number 0"
+            },
+            {
+                title: "Card number 1",
+                infoText: "Info for card number 1"
+            },
+            {
+                title: "Card number 2",
+                infoText: "Info for card number 2"
+            },
+            {
+                title: "Card number 3",
+                infoText: "Info for card number 3"
+            }
+        ]
+
+        function changeCardInfo(id) {
+            let newData = infoMassive[Math.floor(Math.random() * 4)];
+            let block = document.getElementById(id);
+            block.children[0].children[0].textContent = newData.title;
+            block.children[0].children[1].textContent = newData.infoText;
+
+        }
+        function deleteCard(id) {
+            document.querySelector(".container").removeChild(document.getElementById(id));
+        }
+    </script>
+
+    <h1>Exercise 2</h1>
+    <h2>Наш текущий массив</h2>
+    <p id="result">[40, 31, 73, 73, 8, 72, 81, 96, 37, 32, 80, 32, 58, 3, 34, 74, 91, 36, 77, 84]</p>
+    <form>
+        <label>Минимальное значение<input type="number" id="min"></label>
+        <label>Максимальное значение<input type="number" id="max"></label>
+    </form>
+    <button onclick="Filter()">Filter</button>
+    <script>
+        let currentMassive = [40, 31, 73, 73, 8, 72, 81, 96, 37, 32, 80, 32, 58, 3, 34, 74, 91, 36, 77, 84];
+        function Filter() {
+
+            currentMassive = currentMassive.filter(elem => {
+                return (elem >= document.getElementById("min").value && elem <= document.getElementById("max").value);
+            });
+            document.getElementById("result").innerText = currentMassive.toString();
+
+        }
+    </script>
+    <h1>Exercisse 3</h1>
+    <div class="container-sort" id="sort">
+        <div class="sort-card">
+            <p>40</p>
+            <img src="https://kartinki-life.ru/articles/2018/09/29/pozhelanie-horoshego-prekrasnogo-volshebnogo-nastroeniya-i-udachnogo-dnya-pozitiva-chast-2-aya-12.jpg" width="100px" height="100px" />
+        </div>
+        <div class="sort-card">
+            <p>5</p>
+            <img src="https://img-fotki.yandex.ru/get/935357/27156178.451/0_1d41f1_d65aeb9a_XL.jpg" width="100px" height="100px" />
+        </div>
+        <div class="sort-card">
+            <p>13</p>
+            <img src="https://www.sunhome.ru/i/cards/53/skachat-krasivuyu-otkritku-s-pozhelaniyami-horoshego-dnya.xxl.jpg" width="100px" height="100px"/>
+
+        </div>
+        <div class="sort-card">
+            <p>11</p>
+            <img src="https://s00.yaplakal.com/pics/pics_preview/4/6/7/14270764.jpg" width="100px" height="100px" />
+
+        </div>
+
+    </div>
+    <button onclick="Up()">Sort up</button>
+    <button onclick="Down()">Sort down</button>
+    <script>
+        let cardsInfo = [
+            {
+                id: 11,
+                src: "https://s00.yaplakal.com/pics/pics_preview/4/6/7/14270764.jpg"
+            },
+            {
+                id: 40,
+                src: "https://kartinki-life.ru/articles/2018/09/29/pozhelanie-horoshego-prekrasnogo-volshebnogo-nastroeniya-i-udachnogo-dnya-pozitiva-chast-2-aya-12.jpg"
+            },
+            {
+                id: 13,
+                src: "https://www.sunhome.ru/i/cards/53/skachat-krasivuyu-otkritku-s-pozhelaniyami-horoshego-dnya.xxl.jpg"
+            },
+            {
+                id: 5,
+                src: "https://img-fotki.yandex.ru/get/935357/27156178.451/0_1d41f1_d65aeb9a_XL.jpg"
+            }
+        ]
+        let containerSort = document.getElementById("sort");
+        console.log(containerSort);
+        function Up() {
+          
+            let filteredMassive = cardsInfo.sort((a, b) => {
+                return a.id - b.id;
+            });
+            console.log(cardsInfo);
+            console.log(filteredMassive);
+            for(let i =0; i < containerSort.childElementCount;i++) {
+
+                containerSort.children[i].children[0].innerHTML = filteredMassive[i].id;
+                containerSort.children[i].children[1].src = filteredMassive[i].src;
+            }
+        }
+        function Down() {
+            let filteredMassive = cardsInfo.sort((a, b) => {
+                return b.id - a.id;
+            });
+            console.log(cardsInfo);
+            console.log(filteredMassive);
+            for(let i =0; i < containerSort.childElementCount;i++)
+            {
+                containerSort.children[i].children[0].innerHTML = filteredMassive[i].id;
+                containerSort.children[i].children[1].src = filteredMassive[i].src;
+            }
+        }
+
+    </script>
+
+    <h1>Exercise 4 and 5</h1>
+    <div style="position: relative; width: 100px; height: 100px;" onclick="ShowComments()">
+
+        <img src="https://i-pusk.ru/upload/iblock/8eb/kqjyhur8rzwcmygshamvydin71ozutlw.webp" width="150px" height="100px">
+        <p id="counter" style="position:absolute;top:-30px;right:-20px;font-size:30px;color:red;">0</p>
+    </div>
+    <div id="comments" style="width:100px;height:100px;background-color:black;color:white;display: none;">
+        <p>Уведомление1</p>
+        <p>Уведомление2</p>
+        <p>Уведомление3</p>
+        <p>Уведомление4</p>
+
+
+
+        
+    </div>
+    <script>
+        let flag=false;
+        let intervalId = setInterval(()=> {
+            document.getElementById("counter").innerText = Number(document.getElementById("counter").innerText) + 1;
+        }, 3000);
+        function ShowComments() {
+            let blockComments = document.getElementById("comments");
+            if(!flag) {
+                blockComments.style.display = "block";
+                clearInterval(intervalId);
+                setTimeout(() => {
+                    intervalId =  setInterval(()=> {
+                        document.getElementById("counter").innerText = Number(document.getElementById("counter").innerText) + 1; }
+                        , 3000);
+                }, 10000);
+                flag=true;
+                
+            }
+            else {
+                flag=false;
+                blockComments.style.display = "none ";
+
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
