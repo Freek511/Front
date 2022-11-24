@@ -87,35 +87,37 @@
         <label>Максимальное значение<input type="number" id="max"></label>
     </form>
     <button onclick="Filter()">Filter</button>
+    <button onclick="Reset()">Reset</button>
     <script>
         let currentMassive = [40, 31, 73, 73, 8, 72, 81, 96, 37, 32, 80, 32, 58, 3, 34, 74, 91, 36, 77, 84];
         function Filter() {
-
-            currentMassive = currentMassive.filter(elem => {
+            let newMass = currentMassive.filter(elem => {
                 return (elem >= document.getElementById("min").value && elem <= document.getElementById("max").value);
             });
-            document.getElementById("result").innerText = currentMassive.toString();
-
+            document.getElementById("result").innerText = '[' + newMass.toString() + ']';
+        }
+        function Reset() {
+            document.getElementById("result").innerText = '[' + currentMassive.toString() + ']';
         }
     </script>
     <h1>Exercisse 3</h1>
     <div class="container-sort" id="sort">
         <div class="sort-card">
             <p>40</p>
-            <img src="https://kartinki-life.ru/articles/2018/09/29/pozhelanie-horoshego-prekrasnogo-volshebnogo-nastroeniya-i-udachnogo-dnya-pozitiva-chast-2-aya-12.jpg" width="100px" height="100px" />
+            <img src="/prac7/img/ahents/skye.jpg" width="100px" height="100px" />
         </div>
         <div class="sort-card">
             <p>5</p>
-            <img src="https://img-fotki.yandex.ru/get/935357/27156178.451/0_1d41f1_d65aeb9a_XL.jpg" width="100px" height="100px" />
+            <img src="/prac7/img/ahents/sova.jpg" width="100px" height="100px" />
         </div>
         <div class="sort-card">
             <p>13</p>
-            <img src="https://www.sunhome.ru/i/cards/53/skachat-krasivuyu-otkritku-s-pozhelaniyami-horoshego-dnya.xxl.jpg" width="100px" height="100px"/>
+            <img src="/prac7/img/ahents/sage.jpg" width="100px" height="100px"/>
 
         </div>
         <div class="sort-card">
             <p>11</p>
-            <img src="https://s00.yaplakal.com/pics/pics_preview/4/6/7/14270764.jpg" width="100px" height="100px" />
+            <img src="/prac7/img/ahents/chamber.jpg" width="100px" height="100px" />
 
         </div>
 
@@ -126,19 +128,19 @@
         let cardsInfo = [
             {
                 id: 11,
-                src: "https://s00.yaplakal.com/pics/pics_preview/4/6/7/14270764.jpg"
+                src: "/prac7/img/ahents/chamber.jpg"
             },
             {
                 id: 40,
-                src: "https://kartinki-life.ru/articles/2018/09/29/pozhelanie-horoshego-prekrasnogo-volshebnogo-nastroeniya-i-udachnogo-dnya-pozitiva-chast-2-aya-12.jpg"
+                src: "/prac7/img/ahents/skye.jpg"
             },
             {
                 id: 13,
-                src: "https://www.sunhome.ru/i/cards/53/skachat-krasivuyu-otkritku-s-pozhelaniyami-horoshego-dnya.xxl.jpg"
+                src: "/prac7/img/ahents/sage.jpg"
             },
             {
                 id: 5,
-                src: "https://img-fotki.yandex.ru/get/935357/27156178.451/0_1d41f1_d65aeb9a_XL.jpg"
+                src: "/prac7/img/ahents/sova.jpg"
             }
         ]
         let containerSort = document.getElementById("sort");
@@ -181,12 +183,8 @@
         <p>Уведомление1</p>
         <p>Уведомление2</p>
         <p>Уведомление3</p>
-        <p>Уведомление4</p>
-
-
-
-        
     </div>
+
     <script>
         let flag=false;
         let intervalId = setInterval(()=> {
