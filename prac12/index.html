@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<h1>Exercise1</h1>
+<a href="https://vk.com/feed">GitHub</a>
+<a href="https://vk.com/feed">Vkontakte</a>
+<script>
+    let hrefs = document.getElementsByTagName('a');
+
+    for(let a of hrefs) {
+        a.style.color = "red";
+    }
+</script>
+
+<h1>Exercise 2</h1>
+<h2>TODO list</h2>
+<button id="add-task">Add task</button>
+<ul id="todo-list">
+
+</ul>
+<script>
+    let list = document.getElementById("todo-list");
+    let addButton = document.getElementById("add-task");
+    let taskInfo;
+    addButton.addEventListener("click",()=> {
+        do {
+            taskInfo = prompt("Enter your task", "");
+            console.log("Click");
+            if(taskInfo !== null && taskInfo !== undefined && taskInfo !== "" ) {
+                let li = document.createElement("li");
+                li.textContent = taskInfo;
+                list.appendChild(li);
+            }
+        }
+        while(taskInfo !== null && taskInfo !== undefined && taskInfo != "");
+    });
+</script>
+
+<h1>Exercise 3</h1>
+<button id="show">Show Notification</button>
+<script>
+    let showButton = document.getElementById("show");
+    showButton.addEventListener("click", showNotification);
+
+    function showNotification(options) {
+        let notification = document.createElement("div");
+        notification.className = "notification";
+        notification.textContent = "Its notification";
+        document.body.appendChild(notification);
+        setTimeout(()=> {
+            document.body.removeChild(notification);
+        }, 1500);
+
+    }
+
+</script>
+
+
+<h1>Exercise 4</h1>
+<div id="block4" class="exercise4">
+    <div class="inner">
+        <img src="/prac7/img/ahents/sage.jpg"/>
+    </div>
+</div>
+<script>
+    let block4 = document.getElementById("block4");
+    let inner = block4.children[0];
+    let img = inner.children[0];
+    block4.addEventListener("click", (event)=> {
+        alert(event.x + " " + event.y);
+    });
+    block4.style.display = "flex";
+    block4.style.justifyContent = "center";
+    block4.style.alignContent = "center";
+    block4.style.alignItems = "center";
+    block4.style.justifyItems = "center";
+    inner.style.display = "flex";
+    inner.style.justifyContent = "center";
+    inner.style.alignContent = "center";
+    inner.style.alignItems = "center";
+    inner.style.justifyItems = "center";
+    inner.style.width = "60%";
+    inner.style.height = "60%";
+    inner.style.background = "white";
+
+    img.style.width = "60%";
+    img.style.height = "60%";
+
+</script>
+
+<h1>Exercise 4 and 5</h1>
+<div style="position: relative; width: 100px; height: 100px;" onclick="ShowComments()">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/2478/2478159.png" width="100px" height="100px">
+    <p id="counter" style="position:absolute;top:-40px;right:-10px;font-size:30px;color:red;">0</p>
+</div>
+<div id="comments" style="width:fit-content;height:fit-content;background-color: #ff7675;color:white;display: none;">
+    <p>Уведомление1<button>X</button></p>
+    <p>Уведомление2<button>X</button></p>
+    <p>Уведомление3<button>X</button></p>
+</div>
+
+</div>
+
+<script>
+    let flag=false;
+    let intervalId = setInterval(()=> {
+        document.getElementById("counter").innerText = Number(document.getElementById("counter").innerText) + 1;
+    }, 3000);
+    function ShowComments() {
+        let blockComments = document.getElementById("comments");
+        if(!flag) {
+            blockComments.style.display = "block";
+            clearInterval(intervalId);
+            setTimeout(() => {
+                intervalId =  setInterval(()=> {
+                        document.getElementById("counter").innerText = Number(document.getElementById("counter").innerText) + 1; }
+                    , 3000);
+            }, 10000);
+            flag=true;
+
+        }
+        else {
+            flag=false;
+            blockComments.style.display = "none ";
+
+        }
+    }
+    let comments = document.getElementById("comments");
+    console.log(comments);
+    comments.addEventListener("click", (event)=> {
+        console.log(event.target);
+        console.log(event.target.tagName);
+        if(event.target.tagName === "BUTTON"){
+            comments.removeChild(event.target.closest("p"));
+        }
+    }) ;
+
+</script>
+</body>
+</html>

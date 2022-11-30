@@ -1,0 +1,46 @@
+.notification {
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ff0000;
+    color: black;
+    top: 50%;
+    right: 50%;
+}
+
+
+.exercise4 {
+    width: 100%;
+    background-color: grey;
+    height: 500px;
+}
+
+.card {
+    height: 200px;
+    width: 100px;
+    background-color: blue;
+    margin: 10px 10px 10px 10px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.sort-card {
+    height: 200px;
+    width: 100px;
+    background-color: grey;
+    text-align: center;
+    font-size: 40px;
+    margin: 10px 10px 10px 10px;
+}
+
+.container-sort{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
