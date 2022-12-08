@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+    color: black;
+}
+.ex1{
+    margin-left: 40%;
+    border-radius: 10px;
+    margin-top: 5%;
+    height: 60px;
+    width: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    background-color: cornflowerblue;
+}
+.ex2{
+    margin-left: 40%;
+    border-radius: 10px;
+    margin-top: 1%;
+    height: 60px;
+    width: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    background-color: rosybrown;
+}
+.ex3{
+    margin-left: 40%;
+    border-radius: 10px;
+    margin-top: 1%;
+    height: 60px;
+    width: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    background-color: yellow;
+}
+.ex4{
+    margin-left: 40%;
+    border-radius: 10px;
+    margin-top: 1%;
+    height: 60px;
+    width: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    background-color: pink;
+}
+.ex5{
+    border-radius: 10px;
+    margin-left: 40%;
+    margin-top: 1%;
+    height: 60px;
+    width: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    background-color: darkseagreen;
+}
+.ex6{
+    border-radius: 10px;
+    margin-left: 40%;
+    margin-top: 1%;
+    height: 60px;
+    width: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    background-color: coral;
+}
+.content1{
+    margin-left: 34%;
+    margin-top: 1%;
+    height: 400px;
+    width: 600px;
+
+    display: block;
+}
+.container2{
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 1%;
+    height: 600px;
+    width: 1000px;
+
+    display: block;
+}
+.container3{
+    margin-left: 42%;
+    margin-top: 1%;
+    height: 300px;
+    width: 300px;
+
+    display: block;
+}
+.container4{
+    margin-left: 37%;
+    margin-top: 1%;
+    height: 300px;
+    width: 500px;
+
+    display: block;
+}
+.href{
+    margin-top: 30px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+.mainImg {
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    padding: 5px;
+}
+
+.photos img {
+    margin-left: 10px;
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    float: left;
+}
+.photos li {
+    list-style: none;
+}
+.gray {
+    background: gray;
+}
+
+li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.field {
+    margin-left: 30px;
+    border-radius: 5px;
+    background: white;
+    width: 400px;
+    height: 30px;
+    margin-top: 100px;
+    border: 2px solid black;
+}
+
+.line {
+    width: 12px;
+    height: 33px;
+    border-radius: 3px;
+    position: relative;
+    left: 15px;
+    top: -3px ;
+    background: red;
+    cursor: pointer;
+}
+.container5{
+    margin-left: 33%;
+    margin-top: 1%;
+    height: 500px;
+    width: 700px;
+    border-style: solid;
+    border-color: black;
+    display: block;
+}
+.photo1,.photo2,.photo3{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+.trash{
+    margin-top: 120px;
+    margin-left: 300px;
+    height: 150px;
+    width:220px;
+    display: block ;
+}
+.count{
+    margin-top: -30px;
+    margin-left: 40px;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+
+}
+.container6{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30%;
+    background-color: #211d1d;
+    height: 300px;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.text {
+    font-weight: 50;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #fafafa;
+}
+.dud {
+    color: #757575;
+}
+.balance{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    display: block;
+}
+.accData{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    color: red;
+    margin-right: 10px;
+}
+.rouble{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: red;
+}

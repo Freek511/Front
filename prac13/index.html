@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Web-Developer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300&display=swap');
+  </style>
+</head>
+<body>
+<h1>Exercise 1</h1>
+<div class="content1">
+  <a class="href" href="https://ya.ru/">Переход в Яндекс</a>
+  <a class="href" href="https://www.google.ru/">Переход в Гугл</a>
+  <a class="href" href="https://github.com/">Переход в Гитхаб</a>
+  <a class="href" href="https://www.youtube.com/">Переход в Ютуб</a>
+  <a class="href" href="https://vk.com/feed">Переход в ВК</a>
+</div>
+<h1>Exercise 2</h1>
+<div class="container2">
+  <p><img class="mainImg" src="/prac7/img/ahents/reyna.jpg" alt="Large image"></p>
+
+  <ul class="photos">
+    <!-- браузер показывает небольшую встроенную подсказку из атрибута "title" при наведении курсора на текст -->
+    <li>
+      <a href="/prac7/img/ahents/reyna.jpg" ><img src="/prac7/img/ahents/reyna.jpg"></a>
+    </li>
+    <li>
+      <a href="/prac7/img/ahents/brim.jpg" ><img src="/prac7/img/ahents/brim.jpg"></a>
+    </li>
+    <li>
+      <a href="/prac7/img/ahents/sage.jpg" ><img src="/prac7/img/ahents/sage.jpg"></a>
+    </li>
+    <li>
+      <a href="/prac7/img/ahents/chamber.jpg" ><img src="/prac7/img/ahents/chamber.jpg"></a>
+    </li>
+    <li>
+      <a href="/prac7/img/ahents/jett.jpg" ><img src="/prac7/img/ahents/jett.jpg"></a>
+    </li>
+    <li>
+      <a href="/prac7/img/ahents/killjoy.jpg"><img src="/prac7/img/ahents/killjoy.jpg"></a>
+    </li>
+  </ul>
+</div>
+
+
+<h1>Exercise 3</h1>
+<div class="container3">
+  <ul class="list">
+    <li class="one">Файл 1</li>
+    <li class="one">Файл 2</li>
+    <li class="one">Файл 2</li>
+    <li class="one">Файл 3</li>
+    <li class="one">Файл 4</li>
+    <li class="one">Файл 5</li>
+    <li class="one">Файл 6</li>
+  </ul>
+</div>
+
+
+<h1>Exercise 4</h1>
+<div class="container4">
+  <div class="field">
+    <div class="line"></div>
+  </div>
+</div>
+
+<h1>Exercise 5</h1>
+
+<div id="ex5" onselectstart="return false" style="display:flex;">
+  <div id="goods-for-sale" >
+    <h2>Agents</h2>
+    <div class="goods">
+      <img src="/prac7/img/ahents/sova.jpg" onmousedown="return false;" width="100px"  height="100px" />
+      <h3>Sova</h3>
+      <h3>1000</h3>
+    </div>
+    <div  class="goods">
+      <img src="/prac7/img/ahents/skye.jpg" onmousedown="return false;" width="100px" height="100px"  />
+      <h3>Skye</h3>
+      <h3>500</h3>
+    </div>
+    <div  class="goods">
+      <img src="/prac7/img/ahents/sage.jpg" onmousedown="return false;" width="100px" height="100px"/>
+      <h3>Sage</h3>
+      <h3>1500</h3>
+    </div>
+  </div>
+  <div id="goods-in-basket" style="margin-left: 100px;">
+    <h2>Ability coast</h2>
+    <h2>Всего:<span id="result">0</span></h2>
+  </div>
+
+</div>
+
+
+
+
+<br><img id="train" src="https://js.cx/clipart/train.gif" style=" position: relative; cursor: pointer;">
+
+
+<script>
+  train.onclick = function() {
+    let start = Date.now(); //время начала
+
+    let timer = setInterval(function() {
+      // время с начала анимации
+      let timePassed = Date.now() - start;
+
+      // анимация
+      train.style.left = timePassed / 5 + 'px';
+
+      if (timePassed > 5000) clearInterval(timer);
+
+    }, 20);
+  }
+</script>
+
+
+
+
+
+<textarea id="textExample" rows="5" cols="60" style="display: block;border: 1px solid #BBB;color: #444;font-size: 110%;">Но взял он меч, и взял он щит,
+Высоких полон дyм.
+В глущобу путь его лежит
+Под дерево Тумтум.
+</textarea>
+
+<button onclick="animateText(textExample)" style=" margin-top: 10px">Запустить анимацию набора текста!</button>
+
+<script>
+  function animateText(textArea) {
+    let text = textArea.value;
+    let to = text.length,
+            from = 0;
+
+    animate({
+      duration: 5000,
+      timing: bounce,
+      draw: function(progress) {
+        let result = (to - from) * progress + from;
+        textArea.value = text.slice(0, Math.ceil(result))
+      }
+    });
+  }
+
+  function animate({timing, draw, duration}) {
+
+    let start = performance.now();
+
+    requestAnimationFrame(function animate(time) {
+      // timeFraction изменяется от 0 до 1
+      let timeFraction = (time - start) / duration;
+      if (timeFraction > 1) timeFraction = 1;
+
+      // вычисление текущего состояния анимации
+      let progress = timing(timeFraction);
+
+      draw(progress); // отрисовать её
+
+      if (timeFraction < 1) {
+        requestAnimationFrame(animate);
+      }
+
+    });
+  }
+
+  function bounce(timeFraction) {
+    for (let a = 0, b = 1; 1; a += b, b /= 2) {
+      if (timeFraction >= (7 - 4 * a) / 11) {
+        return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+      }
+    }
+  }
+</script>
+
+
+<script src="main.js"></script>
+</body>
+</html>
